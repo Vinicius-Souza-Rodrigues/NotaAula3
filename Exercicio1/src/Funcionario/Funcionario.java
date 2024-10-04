@@ -1,9 +1,19 @@
 package Funcionario;
 
 public class Funcionario {
-    private String nome;
-    private int nascimento;
-    private double salario;
+    protected String nome;
+    protected int nascimento;
+    protected double salario;
+
+    public Funcionario(String nome, int nascimento, double salario) {
+        setSalario(salario);
+        setNascimento(nascimento);
+        setNome(nome);
+    }
+
+    public Funcionario() {
+
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -27,5 +37,9 @@ public class Funcionario {
 
     public void setNascimento(int nascimento) {
         this.nascimento = nascimento;
+    }
+
+    public int calcularAniversario() {
+        return 2024 - getNascimento();
     }
 }
